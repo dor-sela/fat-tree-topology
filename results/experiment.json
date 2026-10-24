@@ -1,0 +1,50 @@
+{
+  "model": "uniform fixed-count removal without replacement over the eligible link pool",
+  "failure_scope": "fabric-only",
+  "include_host_links": false,
+  "eligible_link_types": [
+    "agg-edge",
+    "core-agg"
+  ],
+  "rounding": "floor(requested_failure_fraction * eligible_links)",
+  "actual_failed_fraction_denominator": "eligible_links",
+  "plot_x_axis": "requested percentage of eligible links; actual fractions are in the CSV files",
+  "failure_rates": [
+    0.0,
+    0.025,
+    0.05,
+    0.075,
+    0.1,
+    0.125,
+    0.15,
+    0.175,
+    0.2,
+    0.225,
+    0.25
+  ],
+  "settings": [
+    {
+      "k": 4,
+      "iterations_per_rate": 15,
+      "base_seed": 100,
+      "eligible_links": 32,
+      "total_links": 48
+    },
+    {
+      "k": 6,
+      "iterations_per_rate": 10,
+      "base_seed": 200,
+      "eligible_links": 108,
+      "total_links": 162
+    }
+  ],
+  "seed_schedule": "base_seed + int(requested_failure_fraction * 1000) + iteration",
+  "aggregation": "equal-weight mean of per-trial means; undefined path means omitted",
+  "error_bars": "plus/minus one sample standard deviation across trials (ddof=1)",
+  "python": "3.12.14",
+  "packages": {
+    "networkx": "3.7",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.4"
+  }
+}
