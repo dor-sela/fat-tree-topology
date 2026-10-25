@@ -397,25 +397,6 @@ bound on delivery possible under a specified forwarding policy; graph distance
 is a lower bound on that policy's route length in hops. Neither quantity is a
 measurement of throughput, latency or convergence.
 
-## 10. References and AI assistance
-
-[1] M. Al-Fares, A. Loukissas, and A. Vahdat, "A scalable, commodity data center
-network architecture," *ACM SIGCOMM Computer Communication Review*, 38(4),
-63-74, October 2008. [DOI](https://doi.org/10.1145/1402946.1402967).
-[Author-hosted paper](https://cseweb.ucsd.edu/~vahdat/papers/sigcomm08.pdf).
-Section 2.2 defines the topology; Section 3.8 discusses bypassing failures between
-switches. This project studies structural path availability rather than reproducing
-the paper's complete routing and failure-recovery mechanisms.
-
-**AI assistance disclosure:** OpenAI Codex assisted on 24 October 2026 with
-requirements review, original-result reproduction, mathematical checks, documentation,
-input and undefined-metric fixes, RNG isolation, exports, figures and regression
-tests. Following review of Section 3.8, it also helped change the default failure
-pool to fabric links, add optional host-link inclusion, regenerate results and
-update the associated documentation. Current default results intentionally differ
-from the original all-link experiment; optional all-link mode preserves the
-original means in the verified environment. This describes assistance in this
-review and does not assert whether AI was used in earlier development. The
 author remains responsible for understanding and checking everything submitted.
 Codex also assisted with a full-paper coverage audit and the clarification in
 Section 9 distinguishing graph routes from the paper's forwarding mechanisms.
