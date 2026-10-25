@@ -397,6 +397,3 @@ bound on delivery possible under a specified forwarding policy; graph distance
 is a lower bound on that policy's route length in hops. Neither quantity is a
 measurement of throughput, latency or convergence.
 
-author remains responsible for understanding and checking everything submitted.
-Codex also assisted with a full-paper coverage audit and the clarification in
-Section 9 distinguishing graph routes from the paper's forwarding mechanisms.
